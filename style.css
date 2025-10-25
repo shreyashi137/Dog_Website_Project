@@ -860,10 +860,23 @@ width: 200px;
     .reach-us {
         flex-direction: column;
         gap: 30px;
+        align-items: center;
     }
     #email-name {
         flex-direction: column;
         gap: 20px;
+    }
+
+
+    .last-page {
+        margin: 50px 50px;
+        padding: 30px;
+    }
+
+    .four-images {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
     }
 
 }    
@@ -952,13 +965,7 @@ width: 200px;
     }
 
 
-    .blog-container div .btn {
-        display: block;       /* button takes full width or fits inside */
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        margin-top: 10px;
-    }
+    
 
 
     .filters {
@@ -977,26 +984,50 @@ width: 200px;
         width:  80%;
         margin:  20px auto;
     }
+
+    .last-page {
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    .con-info {
+        width: 100%;
+    }
+
+    .sub-but {
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+    .reach-us {
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .Three-logo {
+        width: 150px;
+    }
+    
+    .insta-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .four-images {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #email-name {
+        gap: 15px;
+    }
+    .btn1 {
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
 }
 
 
-    @media (max-width:480px) {
-        .last-page {
-            margin: 0 10px;
-            padding: 15px;
-        }
 
-        .contact h1 {
-            font-size: 22px;
-        }  
-        
-        .con-info {
-            font-size: 16px;
-            padding: 8px;
-        }
-
-        .sub-but {
-            font-size: 16px;
-            height: 8px;
-        }
-    }
