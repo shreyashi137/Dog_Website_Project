@@ -818,7 +818,12 @@ width: 200px;
 @media (max-width:768px) {
     nav ul{
         flex-direction: column;
+        align-items: center;
         gap: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
     .dog-card {
         width: 45%;
@@ -875,6 +880,10 @@ width: 200px;
         flex-direction:  column;
         align-items: center;
         gap: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
 
     .hero-content h1 {
@@ -939,3 +948,25 @@ width: 200px;
         margin:  20px auto;
     }
 }
+
+
+    @media (max-width:480px) {
+        .last-page {
+            margin: 0 10px;
+            padding: 15px;
+        }
+
+        .contact h1 {
+            font-size: 22px;
+        }  
+        
+        .con-info {
+            font-size: 16px;
+            padding: 8px;
+        }
+
+        .sub-but {
+            font-size: 16px;
+            height: 8px;
+        }
+    }
