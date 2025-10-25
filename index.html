@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog-Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Dog World</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"> Home</a></li>
+                <li><a href="about.html" target="_blank"> About</a></li>
+                <li><a href="adopt.html" target="_blank"> Adopt</a></li>
+                <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                <li><a href="blog.html"target="_blank" >Blog</a></li>
+                <li><a href="contact.html"target="_blank" >Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- 🐶 Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="Images/Cute_Dog_Image.jpg">
+        </div>
+
+
+       <div class="hero-content">
+        <h1> Meet Your New Best Friend 🐶</h1>
+        <p>Find the perfect dog companion to fill your life with love and joy.</p>
+        <button id="explore-btn">Explore Dogs</button>
+       </div>
+    </section>
+
+
+
+    <!-- Hidden Section For Login And Sign-Up  Buttons -->
+     <section class="action-section" id="action-section">
+        <h2> Join the Dog World Community 🐾 </h2>
+       <div class="buttons">
+        <button class="login-btn">Login</button>
+        <button class="sign-up-btn">Sign-up  /  Create an account</button>     
+        </div>
+     </section>
+
+
+
+     <!-- Sign-Up -->
+      <div class="popup" id="signup-popup">
+        <div class="popup-content">
+            <h2>Sign-Up</h2>
+            <input type="email" placeholder="Enter email"/>
+            <input type="password" placeholder="Enter password"/>
+            <input type="password" placeholder="Confirm password"/>
+            <button>Sign-Up</button>
+            <span class="close-popup">&times;</span>
+        </div>
+      </div>
+     
+
+     <!-- Login Popup -->
+      <div class="popup" id="login-popup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <input type="email" placeholder="Enter email"/>
+            <input type="password" placeholder="Enter password"/>
+            <button>Login</button>
+
+
+            <p><a href="#" id="forgot-password">forgot-password?</a></p>
+
+            <span class="close-popup">&times;</span>
+        </div>
+      </div>
+
+
+
+      <div class="popup" id="Thankyou-popup">
+        <div class="popup-content">
+            <h2> Thank You !</h2>
+            <p> You Successfully logged in.</p>
+            <button id="Close-Thankyou">OK</button>
+       </div>
+      </div>
+
+
+
+    <script src="Index_script.js"></script>
+</body>
+</html>
