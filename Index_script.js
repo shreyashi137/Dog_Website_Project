@@ -20,8 +20,7 @@ const signupBtn = document.querySelector(".sign-up-btn");
 const loginPopup = document.getElementById("login-popup");
 const signupPopup = document.getElementById("signup-popup");
 const closeBtns = document.querySelectorAll(".close-popup"); 
-const ThankyouPopup = document.querySelectorAll(".Thankyou-popup"); 
-const closeThankyou = document.querySelectorAll(".close-thankyou"); 
+
 
 
 //Open Login Popup
@@ -106,6 +105,10 @@ loginSubmit.addEventListener("click",()=>{
 })
 
 // Close Thank You Popup
+
+const ThankyouPopup = document.getElementById("Thankyou-popup"); 
+const closeThankyou = document.getElementById("Close-Thankyou"); 
+
 closeThankyou.addEventListener("click",()=>{
     ThankyouPopup.style.display = "none";
 
