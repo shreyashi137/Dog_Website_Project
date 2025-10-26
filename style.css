@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     background-color: #fff9f0;
 }
 
@@ -379,15 +381,31 @@ color: rgb(52, 21, 192);
 /* Adopt-Page */
 .filters {
     display: flex;
-    gap: 50px;
-    justify-content: space-evenly;
-    background-color:#ddc594;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #ddc594;
     padding: 15px;
-    margin: 31px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 1000px;
 }
 
+.filters select {
+    height: 35px;
+    width: 140px;
+    color: white;
+    background-color: #ba7308;
+    border: none;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+}
 
-
+.search-box {
+    font-weight: bold;
+    text-align: center;
+}
 
 #breedFilter {
     height: 27px;
@@ -422,50 +440,70 @@ color: rgb(52, 21, 192);
     border-radius: 7px;
 }
 
-.search-box {
+/* .search-box {
     font-weight: bold;
-}
+} */
 
 
 /* dog-gallery */
 .dog-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* center the row */
+    gap: 30px;               /* space between cards */
+    padding: 40px;
+    background-color: #fff9f0;
 }
 
 .dog-card {
-    width: 45%;
+   background-color: #fff;
+    flex: 1 1 45%;           /* 2 cards per row on desktop */
+    max-width: 400px;        /* limit max width */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border-color: white;
-    margin-bottom: 30px;
     text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 15px;
+    cursor: pointer;
 }
+
+
 
 .dog-card img {
-    height: 200px;
-    margin-top: 17px;
-    border-radius: 15px;
-}
-
-.dog-info h3 {
-    background-color: #ffb84d;
-    display: inline-block;
-    padding: 12px 12px ;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    /* margin-bottom: 15px; */
     cursor: pointer;
-    display: inline-block;
-    transition: background-color 0.3s;
+    
 }
 
 .dog-info {
     display: none;
     background-color: #fff9e3;
     padding:  10px;
+    margin-top: 10px;
     border-radius: 10px;
-    transition:  all 0.11s ease;
+    /* transition:  all 0.11s ease; */
     }
 
+
+.dog-info h3 {
+    background-color: #ffb84d;
+    display: inline-block;
+    padding: 9px 12px ;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 7px;
+    /* transition: background-color 0.3s; */
+}
+
+
+.dog-info h3:hover {
+    background-color: #ff9933;
+}
 
 
 /* ------------------------------------------------------------------------------------------------------------------------- */
@@ -672,7 +710,7 @@ color: rgb(52, 21, 192);
     text-align: center;
 }
 
-.last-page {
+/* .last-page {
     padding: 50px;
     margin: 50px 200px 50px 200px;
      
@@ -694,27 +732,77 @@ color: rgb(52, 21, 192);
 
 hr {
     color: black;
+} */
+
+/* Contact form container */
+.last-page {
+    max-width: 400px;        /* make it a bit narrow */
+    margin: 30px auto;       /* center horizontally with some top/bottom space */
+    padding: 20px;
+    /* background-color: #fff9f0;  */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); optional shadow */
+    margin-top: 30px;
+    
 }
 
 
-.sub-but {
-    display: block;
-    margin :20px auto;
-    height: 45px;
-    width: 107px;
-    border-radius: 2px;
-    border: none;
-    cursor: pointer;
-    background-color: #FF9933;   
-    color: black;
+
+/* Labels (p tags) - left aligned */
+.last-page p {
+    text-align: left;
     font-weight: bold;
-    font-size: 17px;
+    margin: 10px 0 5px 0;    /* space around the label */
 }
+
+/* Inputs - full width inside container */
+.last-page .con-info {
+    width: 100%;             /* fills the container */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+/* HR line - optional, centered but narrow */
+.last-page hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* Button style */
+.sub-but {
+    padding: 10px 30px;
+    background-color: #ffb84d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
 
 .sub-but:hover {
     background-color: #f4a04c;
 }
 
+.con-info {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.con-info:focus {
+  border: 2px solid orange;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+  /* outline: none; */
+}
 
 /* ------ */
 
@@ -861,10 +949,7 @@ width: 200px;
     }
 
 
-    .dog-card {
-        width: 45%;
-        margin: 5px;
-    }
+    /* Let the grid handle card sizing on smaller screens; remove fixed widths here */
 
     .hero {
         flex-direction: column;
@@ -935,8 +1020,39 @@ width: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
     }
+
+    .filters {
+        flex-wrap:  wrap;
+        gap: 15px;
+        margin: 20px;
+    }
+
+    .filters select{
+        width: 130px;
+        height: 32px;
+    }
+
+
+    .dog-gallery {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .dog-card {
+       flex:  1 1 100%;
+       max-width: 100%;
+    }
+
+    .dog-card img {
+         /* width: 100%; */
+         height: auto;
+         /* border-radius: 12px;
+         object-fit: cover; */
+    }
+
 
 }    
 
@@ -1058,11 +1174,45 @@ width: 200px;
 
     .filters {
         flex-direction:  column;
-        gap: 15px;
+        align-items: center;
+        gap: 10px;
         margin: 15px;
 
     }
 
+
+    .filters select {
+        width: 100%;
+        max-width:  250px;
+    }
+
+
+    .dog-gallery {
+        /* display: grid; */
+        grid-template-columns:  1fr;
+        gap: 20PX;
+        padding: 15PX;
+    }
+
+    .dog-card {
+        max-width: 95%;
+       pad: 15px;
+       /* height: 400px; */
+       
+    }
+
+     
+    .dog-info img {
+       width: 100%;
+       /* height: auto; */
+       border-radius: 12px;
+       object-fit: cover;
+    }
+
+    .dog-info h3 {
+        font-size: 16px;
+        padding:  8px 12px;
+    }
 
     .subscribe h1 {
         font-size: 20px;
@@ -1117,6 +1267,8 @@ width: 200px;
         padding: 10px 0;
         margin-top: 20px;
     }
+
+    
+    
+    
 }
-
-
